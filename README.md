@@ -9,8 +9,8 @@ This example shows how libraries can work around Rust's orphan rule while provid
 1. providing another "external" trait to be implemented by external crates, and
 1. using a blanket implementation.
 
-See the code at `./src/trait_provider/src/lib.rs` for the implementation corresponding to the library.
+See the code at [`trait_provider/src/lib.rs`](https://github.com/SichangHe/work_around_orphan_check.rs/blob/main/trait_provider/src/lib.rs) for the implementation corresponding to the library.
 
-Once the library does this workaround, library users can implement the trait for external types by implementing the "external" trait for the wrapper type.
+Once the library does this workaround, library users can implement the trait for external types by implementing the "external" trait for the wrapper type. See the code at [`src/lib.rs`](https://github.com/SichangHe/work_around_orphan_check.rs/blob/main/src/lib.rs).
 
 Caveat: the trait has to have a parameter type defined in the user's crate, therefore cascading trait implementations (think of `serde-derive`) are not possible without some indirections.
