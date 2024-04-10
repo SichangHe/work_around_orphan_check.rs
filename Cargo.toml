@@ -1,0 +1,15 @@
+[workspace]
+members = ["trait_provider"]
+
+[package]
+name = "work_around_orphan_check"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+trait_provider = { path = "trait_provider" }
+
+[dev-dependencies]
+impls = "1"
