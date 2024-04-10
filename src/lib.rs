@@ -1,4 +1,4 @@
-use trait_provider::{TestTraitExt, Wrapper};
+use trait_provider::{TestTraitExternal, Wrapper};
 
 pub struct Dummy;
 
@@ -11,7 +11,7 @@ impl TestTrait<Dummy> for usize {}
 
 // However, we can implement `TestTraitExt` for `Wrapper<usize, Dummy>`, which
 // results in an implementation of `TestTrait` for `usize`:
-impl TestTraitExt<Dummy> for Wrapper<usize, Dummy> {}
+impl TestTraitExternal<Dummy> for Wrapper<usize, Dummy> {}
 
 #[cfg(test)]
 mod tests {
